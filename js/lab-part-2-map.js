@@ -5,6 +5,9 @@
 let mneumonics = ['My Very Excellent Mother Just Sent Me Nine Pizzas', 'Please Excuse My Dear Aunt Sally', 'Every Good Boy Does Fine'];
 
 // Your code here!
+let newString = mneumonics.map(function(array) {
+  console.log(array.split(' '));
+})
 
 // map the follow array into an array of objects that only contains the keys 'name' and 'country'
 
@@ -36,10 +39,23 @@ const cities = [
   },
 ]
 
+let newCities = cities.map(function(city) {
+  let newCity = {
+    name: city.name,
+    country: city.country
+  }
+  return newCity
+  // console.log(`${city.name} ${city.country}`);
+});
+console.log(newCities);
+
+
+
 // (2) following the example of how we made a DIY forEach function, build off it and make a DIY map funciton
 // your DIY map function should take an array and a callback as an arguments and return a new array
 
 //Your code here
+
 
 // (3) Take the phonebook array and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
 // For example, the 0th element of the new array should be {Abe: "1-111-111-1111"}
