@@ -1,3 +1,5 @@
+console.log('~~~~~~~~~~~~~~ filter solutions ~~~~~~~~~~~~~~')
+
 // (1) Write code that uses the filter function, and the below isCool function to return a list of people who are cool.
 const people = [
 	{
@@ -18,10 +20,13 @@ const people = [
 	}
 ];
 
-
 const isCool = function(person) {
 	return person.coolnessScore > 20;
 }
+
+let coolSort = people.filter(isCool)
+
+console.log(coolSort)
 
 // Your code goes here
 
@@ -32,10 +37,22 @@ const misc = [3, "true", {a: 1, b: 2}, 7, [1, 2, 3], ['a', 'b', 'c'], "my favori
 
 
 // Your code goes here
+const noStrings = misc.filter(function(thing){
+  return typeof thing != 'string';
+})
 
-//Your code here
+console.log(noStrings)
 
 // (3) following the example of how we made a DIY forEach function, build off it and make a DIY filter funciton
 // your DIY filter function should take an array and a callback as an arguments and return a new array
 
 //Your code here
+function myFilter(array, callback) {
+  let output = []
+  for(let i = 0; i < array.length; i++) {
+    if(callback) {
+      output.push(array[i])
+    }
+  }
+  return output
+}
