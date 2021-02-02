@@ -14,7 +14,46 @@ let splitMneumonics = mneumonics.map(function(element){
 
 console.log(splitMneumonics)
 
-// (2) following the example of how we made a DIY forEach function, build off it and make a DIY map funciton
+// (2) map the follow array into an array of objects that only contains the keys 'name' and 'country'
+
+const cities = [
+  {
+    name: 'Washington DC',
+    country: 'US',
+    population: '700 thousand'
+  },
+  {
+    name: 'Ottawa',
+    country: 'Canada',
+    population: '1 million'
+  },
+  {
+    name: 'Paris',
+    country: 'France',
+    population: '12 million'
+  },
+  {
+    name: 'London',
+    country: 'Uk',
+    population: '9 million'
+  },
+  {
+    name: 'Tokyo',
+    country: 'Japan',
+    population: '38 million'
+  },
+]
+
+const newCities = cities.map(function(city){
+  return {
+    name: city.name,
+    country: city.country
+  }
+})
+
+console.log(newCities)
+
+// (3) following the example of how we made a DIY forEach function, build off it and make a DIY map funciton
 // your DIY map function should take an array and a callback as an arguments and return a new array
 
 //Your code here
@@ -29,7 +68,7 @@ function myMap(array, callback) {
   return output
 }
 
-// (3) Take the phonebook array and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
+// (4) Take the phonebook array and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
 // For example, the 0th element of the new array should be {Abe: "1-111-111-1111"}
 
 let phoneBook = [
