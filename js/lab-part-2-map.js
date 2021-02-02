@@ -6,6 +6,36 @@ let mneumonics = ['My Very Excellent Mother Just Sent Me Nine Pizzas', 'Please E
 
 // Your code here!
 
+// map the follow array into an array of objects that only contains the keys 'name' and 'country'
+
+const cities = [
+  {
+    name: 'Washington DC',
+    country: 'US',
+    population: '700 thousand'
+  },
+  {
+    name: 'Ottawa',
+    country: 'Canada',
+    population: '1 million'
+  },
+  {
+    name: 'Paris',
+    country: 'France',
+    population: '12 million'
+  },
+  {
+    name: 'London',
+    country: 'Uk',
+    population: '9 million'
+  },
+  {
+    name: 'Tokyo',
+    country: 'Japan',
+    population: '38 million'
+  },
+]
+
 // (2) following the example of how we made a DIY forEach function, build off it and make a DIY map funciton
 // your DIY map function should take an array and a callback as an arguments and return a new array
 

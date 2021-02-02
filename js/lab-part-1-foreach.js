@@ -9,7 +9,6 @@ const foods = ["pizza", "tacos", "ice cream", "sushi"];
 
 // your code here
 
-
 // (2) Use the .forEach iterator to loop over the following array of objects and say how delicious each one is.
 // The output should be
 // > Pizza is very delicious
