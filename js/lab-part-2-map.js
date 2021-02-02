@@ -1,4 +1,3 @@
-
 // (1) Write some code using map that takes the array of mneumonics, and returns a two dimensional array.
 // For example, the 0th element of the new array should be:
 // ['My', 'Very', 'Excellent', 'Mother', 'Just', 'Sent', 'Me', 'Nine', 'Pizzas']
@@ -7,7 +6,12 @@ let mneumonics = ['My Very Excellent Mother Just Sent Me Nine Pizzas', 'Please E
 
 // Your code here!
 
-// (2) Take the phonebook array and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
+// (2) following the example of how we made a DIY forEach function, build off it and make a DIY map funciton
+// your DIY map function should take an array and a callback as an arguments and return a new array
+
+//Your code here
+
+// (3) Take the phonebook array and use map to return a new phonebook that includes a country-code that matches the rest of the phone number.
 // For example, the 0th element of the new array should be {Abe: "1-111-111-1111"}
 
 let phoneBook = [
@@ -38,10 +42,5 @@ let phoneBook = [
    {Yam: "555-555-5555"},
    {Zed: "111-111-1111"}
   ];
-
-//Your code here
-
-// (3) following the example of how we made a DIY forEach function, build off it and make a DIY map funciton
-// your DIY map function should take an array and a callback as an arguments and return a new array
 
 //Your code here

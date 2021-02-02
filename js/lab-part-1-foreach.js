@@ -16,7 +16,7 @@ const foods = ["pizza", "tacos", "ice cream", "sushi"];
 // > Tacos is mostly delicious
 // > Cottage Cheese is not very delicious
 
-const foods = [
+const foodLevels = [
   {name: "Pizza", level: "very"},
   {name: "Tacos", level: "mostly"},
   {name: "Cottage Cheese", level: "not very"}
