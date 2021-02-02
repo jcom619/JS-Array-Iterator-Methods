@@ -5,12 +5,11 @@ ___
 
 * Understand usefulness and syntax of Array interator methods
   * Be able to use forEach, map, filter and reduce
-* 
 
 ## Array Iterators vs tradtional for loops
 ___
 
-Javascript arrays have a bunch of useful functions built into them, such as ones we have used alot already like `Array.push()`and `Array.splice()`. There are also built in *iterators* that can take a callback funciton and then run it on every value in the array.
+Javascript arrays have a bunch of useful functions built into them, such as ones we have used alot already like `Array.push()`and `Array.splice()`. There are also built in *iterators* that can take a callback funciton and then run it on every value in the array. They are incredibly handy!
 
 ```javascript
 //  an array of animals
@@ -24,7 +23,7 @@ for(let i = 0; i < myAnimals.length; i++) {
 // use Array.forEach() to log all the animals
 // forEach gives you the values of every index one by one 
 // as a parameter in your callback function
-myAniamls.forEach(function(animal) => {
+myAnimals.forEach(function(animal){
   console.log(animal)
 })
 ```
@@ -34,7 +33,7 @@ myAniamls.forEach(function(animal) => {
 We can refactor our regular for loop into a function that works like forEach, by making a function that accepts an array and callback as parameters and then invokes the callback in a for loop:
 
 ```javascript
-// first w refactor our for loop into a function that can log 
+// first we refactor our for loop into a function that can log 
 // any array that is passed to it
 function logArray(array) {
   // iterate over any array passed and log it
@@ -74,23 +73,21 @@ We just built a DIY forEach, but JS has even more useful iterators!
 Array.map is a handy way to build a new array from a prexisting on. Array.map always needs to return a value, and that return is what is mapped to the new array:
 
 ```javascript
-let myAnimals = ['cat', 'dog', 'cow', 'ardvark', 'horse']
-
 // use a for loop to make add extra content to each animal and 
 // build a new array 
 let myFavAnimals = []
 for(let i = 0; i < myAnimals.length; i++) {
-  myFavAnimals.push(`I love ${animals[i]}s! They are my favorite!`)
+  myFavAnimals.push(`I love ${myAnimals[i]}s! They are my favorite!`)
 }
 
-console.log(myFav)
+console.log(myFavAnimals)
 
 // set the return value of map to a variable:
 let mapMyFavs = myAnimals.map((animal) => {
-  return `I love ${animals[i]}s! They are my favorite!`
+  return `I love ${animal}s! They are my favorite!`
 })
 
-console.log(myMyFavs)
+console.log(mapMyFavs)
 ```
 
   ## Array.filter() 
@@ -99,8 +96,8 @@ Array.filter() filters out values from an existing array and creates an new arra
 
 ```javascript
 // we want to filter cow out of our array
-let colwess =  myAnimals.filter((animal) => {
-  if(animal === 'cow'){
+let cowless =  myAnimals.filter((animal) => {
+  if(animal != 'cow'){
     return true
   }  else {
     return false
@@ -108,7 +105,7 @@ let colwess =  myAnimals.filter((animal) => {
 }) 
 
 // no more cow!
-console.log(cowless)
+console.log(cowless) 
 ```
 
 ## Array.reduce()
