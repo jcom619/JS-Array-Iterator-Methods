@@ -24,11 +24,11 @@ const isCool = function(person) {
 	return person.coolnessScore > 20;
 }
 
+// Your code goes here
 let coolSort = people.filter(isCool)
 
 console.log(coolSort)
 
-// Your code goes here
 
 // (2) Use filter to filter all strings out of the above array. 
 // Don't worry about strings in the nested array (misc[5] is considered an array, not a string)
